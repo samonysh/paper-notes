@@ -1,0 +1,4 @@
+interface:
+  display_name: "论文深度笔记"
+  short_description: "生成含证据定位、概念释义与关联文献的论文笔记"
+  default_prompt: "使用 $paper-notes 阅读这个论文 PDF 或 URL，生成含证据定位、关键概念释义、关联论文核验、综合分析与必要图表的中文 Markdown 笔记。"
