@@ -1,67 +1,67 @@
-# Related literature protocol
+# 关联文献协议
 
-Use this protocol when a paper mentions, cites, contrasts with, or depends on another paper and reading that work would materially improve the note. The goal is a bounded evidence expansion, not an exhaustive citation graph.
+当论文提及、引用、对比或依赖另一篇论文，并且阅读该论文能够实质改善笔记时，使用本协议。目标是有限度地扩展证据，而不是穷尽整个引用图。
 
-## 1. Decide what to follow
+## 1. 决定追踪哪些论文
 
-Prioritize related papers that serve at least one role:
+优先处理至少承担以下一种作用的关联论文：
 
-1. **Concept origin** — introduces or defines a central term, taxonomy, dataset, benchmark, or method.
-2. **Evidence dependency** — is the main support for a consequential claim that the current paper does not itself establish.
-3. **Closest comparison** — supplies the baseline, competing theory, or directly contrasted result needed to understand novelty.
-4. **Synthesis anchor** — is repeatedly used by a review paper to define a theme, period, school, or consensus.
-5. **Conflict or update** — challenges the paper's synthesis or materially updates it.
+1. **概念来源**：提出或定义核心术语、分类体系、数据集、基准或方法；
+2. **证据依赖**：为焦点论文自身没有证明的重要主张提供主要支持；
+3. **最近比较**：提供理解创新性所需的基线、竞争理论或直接对照结果；
+4. **综合锚点**：被综述论文反复用于定义主题、阶段、学派或共识；
+5. **冲突或更新**：挑战焦点论文的综合判断，或对其进行重要更新。
 
-Normally deepen 3–8 papers. Raise the cap only when the user requests a broader literature map. Do not fetch every bibliography entry.
+通常深读 3–8 篇。只有当用户要求更广的文献地图时才提高上限。不得抓取参考文献表中的每一篇论文。
 
-## 2. Route the search
+## 2. 选择检索路径
 
-- **Exact cited work**: search the title, DOI, arXiv ID, or other identifier. Prefer the canonical publisher/repository record and verify title, authors, year, and version.
-- **Current AI/CS neighbors**: use the installed `papers-cool-search` skill when available. Use topic/category/venue search for discovery or one-hop REL for a seed paper. REL is a card-keyword search, not a citation graph; label it accordingly and never recurse automatically.
-- **Broad or cross-disciplinary search**: use the installed `paper-search` skill or authoritative scholarly indexes such as Crossref, OpenAlex, Semantic Scholar, PubMed, or discipline-specific repositories.
-- **Citing/follow-up work**: use a source that exposes citation relations when available. Do not infer “cites” or “is cited by” from keyword similarity.
-- **Unavailable tools**: use web search with exact titles/identifiers and prefer canonical scholarly landing pages. Never invent bibliographic metadata.
+- **精确被引论文**：搜索标题、DOI、arXiv 编号或其他标识符。优先使用出版社或仓库的规范记录，并核对标题、作者、年份和版本。
+- **当前 AI、计算机科学相邻工作**：在可用时使用已安装的 `papers-cool-search` 技能。通过主题、分类或会议检索进行发现，也可对种子论文使用单跳 REL。REL 是卡片关键词检索，不是引用图；必须明确标注，且不得自动递归。
+- **广泛或跨学科检索**：使用已安装的 `paper-search` 技能，或 Crossref、OpenAlex、Semantic Scholar、PubMed 及其他学科仓库等权威学术索引。
+- **引用或后续工作**：在可用时使用明确提供引用关系的数据源。不得根据关键词相似度推断“引用了”或“被引用”。
+- **工具不可用**：使用精确标题或标识符进行网络搜索，并优先采用规范学术落地页。不得编造书目信息。
 
-Use search sources as discovery layers. For precise claims, versions, publication status, or passages, follow the canonical source and read the paper itself when lawful full text is available.
+检索来源只是发现层。对于精确断言、版本、发表状态或原文段落，应访问规范来源，并在合法获得全文时阅读论文本身。
 
-## 3. Verify and read selectively
+## 3. 核验并选择性阅读
 
-For every retained paper:
+对每篇保留的论文：
 
-- deduplicate preprint and venue versions; preserve both links when useful and identify the version read;
-- record why it was selected and its relation to the focal paper;
-- read the abstract plus the relevant definition, method, result, or discussion passage;
-- capture a page/section/table/figure anchor when full text is available;
-- distinguish abstract-only evidence from full-text verification;
-- do not bypass paywalls, login walls, robots restrictions, or download controls.
+- 去重预印本与会议或期刊版本；必要时保留两个链接，并说明实际阅读的版本；
+- 记录选择理由以及它与焦点论文的关系；
+- 阅读摘要以及相关定义、方法、结果或讨论段落；
+- 全文可用时记录页码、章节、表格或图片位置；
+- 区分只核验摘要与已经核验全文；
+- 不得绕过付费墙、登录限制、robots 限制或下载控制。
 
-If only metadata or an abstract is available, label the entry `metadata/abstract only` and do not make passage-level claims.
+若只有元数据或摘要可用，将条目标记为 `仅元数据` 或 `仅摘要`，不得提出段落级断言。
 
-## 4. Integrate without contaminating provenance
+## 4. 集成时保持来源边界
 
-Add external papers in a separate section or clearly labelled callout. Never make their findings look like evidence reported by the focal paper.
+将外部论文放入独立章节或明确标注的提示块。不得让其发现看起来像焦点论文报告的证据。
 
 | 关联论文 | 与本文关系 | 提取内容 | 对理解本文的影响 | 阅读范围与定位 | 来源 |
 |---|---|---|---|---|---|
 
-Use these labels where useful:
+按需使用以下标签：
 
-- **本文引用** — explicitly present in the focal paper's references;
-- **检索补充** — found externally and not known to be cited by the focal paper;
-- **后续工作** — published later;
-- **相反证据** — challenges a claim or synthesis;
-- **概念来源** — clarifies a definition or origin.
+- **本文引用**：明确出现在焦点论文参考文献中；
+- **检索补充**：通过外部检索发现，且无法确认被焦点论文引用；
+- **后续工作**：发表时间晚于焦点论文；
+- **相反证据**：挑战某项主张或综合结论；
+- **概念来源**：澄清定义或概念起源。
 
-After the table, write a short synthesis: what the external reading confirms, revises, or leaves unresolved. Do not treat citation count, popularity, recommendation rank, or an AI-generated summary as scholarly evidence.
+表格后写一段简短综合，说明外部阅读确认、修正了什么，或留下哪些未解决问题。引用次数、流行度、推荐排名或 AI 生成摘要都不能作为学术证据。
 
-## 5. Record retrieval provenance
+## 5. 记录检索来源
 
-For each search session record:
+每次检索记录：
 
-- route/tool and query or seed;
-- search date;
-- selection rule and stopping rule;
-- canonical source URL/DOI/arXiv ID;
-- access level (`full text`, `abstract only`, or `metadata only`).
+- 检索路径或工具，以及查询词或种子；
+- 检索日期；
+- 选择规则和停止规则；
+- 规范来源 URL、DOI 或 arXiv 编号；
+- 访问层级：`全文`、`仅摘要` 或 `仅元数据`。
 
-For papers.cool, retain both the papers.cool discovery URL and the canonical source URL. Distinguish arXiv preprints from peer-reviewed venue papers and state that papers.cool coverage is curated rather than exhaustive.
+使用 papers.cool 时，同时保留 papers.cool 发现页和规范来源 URL。区分 arXiv 预印本与经过同行评审的会议或期刊论文，并说明 papers.cool 的覆盖经过策划但并不穷尽。

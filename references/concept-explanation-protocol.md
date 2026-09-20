@@ -1,45 +1,45 @@
-# Concept explanation protocol
+# 概念解释协议
 
-Use this protocol for concepts whose meaning materially affects comprehension, comparison, or reuse of the paper. A review paper normally needs a compact concept dictionary because definitions often determine its scope, taxonomy, and apparent disagreements.
+当一个概念的含义会实质影响对论文的理解、比较或复用时，使用本协议。综述论文通常需要紧凑的概念词典，因为定义往往决定其范围、分类体系和表面上的分歧。
 
-## 1. Select concepts
+## 1. 选择概念
 
-Create a candidate list from the title/abstract, research questions, keywords, section headings, taxonomy labels, repeated contrasts, formal definitions, and unfamiliar acronyms. Retain a concept when at least one condition holds:
+从标题和摘要、研究问题、关键词、章节标题、分类标签、反复出现的对比、形式化定义以及陌生缩写中生成候选列表。满足以下任一条件时保留概念：
 
-- it defines what the paper includes or excludes;
-- it is an axis of the paper's taxonomy or synthesis;
-- it is field-specific, overloaded across disciplines, recently coined, or used inconsistently;
-- misunderstanding it would change the interpretation of a method, result, controversy, or limitation;
-- the paper assumes it without an adequate definition.
+- 它决定论文纳入或排除什么；
+- 它是论文分类体系或综合分析的一个轴；
+- 它属于领域专用术语、跨学科多义词、新近提出的术语，或在文献中用法不一致；
+- 误解它会改变对方法、结果、争议或局限的解释；
+- 论文默认读者已经理解，却没有给出充分定义。
 
-Do not explain ordinary words or create an exhaustive glossary. Prefer roughly 5–12 core concepts for a substantial review and 3–8 for a research paper, adjusting to actual complexity.
+不要解释普通词语，也不要构造穷尽式词典。篇幅较大的综述通常保留约 5–12 个核心概念，研究论文通常保留 3–8 个，并根据真实复杂度调整。
 
-## 2. Use the source ladder
+## 2. 使用来源阶梯
 
-Establish meaning in this order:
+按以下顺序确定概念含义：
 
-1. **Paper usage** — quote or paraphrase the paper's explicit definition and record a page/section anchor.
-2. **Cited or originating source** — follow the paper's reference when the term is attributed, contested, or introduced elsewhere.
-3. **Authoritative external source** — prefer standards bodies, professional societies, official documentation, scholarly encyclopedias, university materials, textbooks, or peer-reviewed review articles.
-4. **LLM synthesis** — use model knowledge to explain the idea in simpler language or connect sources, clearly labelled `LLM 综合`; it is an explanatory aid, not an authority or citation.
+1. **论文用法**：引用或转述论文的明确规定，并记录页码或章节位置。
+2. **被引或原始来源**：当术语由其他文献提出、存在争议或归属于特定作者时，沿论文参考文献追踪原始来源。
+3. **权威外部来源**：优先使用标准组织、专业学会、官方文档、学术百科、大学材料、教科书或同行评审综述。
+4. **LLM 综合**：使用模型知识简化解释或连接多个来源，并明确标记为 `LLM 综合`；它只能帮助理解，不能充当权威或引文。
 
-Browse when a central concept is undefined, ambiguous, unfamiliar, time-sensitive, or disputed. Do not browse merely to decorate an adequate paper definition. Never use a search-result snippet as the cited source, and do not use an unsourced aggregator or Wikipedia as the sole authority for a consequential definition.
+当核心概念没有定义、含义模糊、自己不熟悉、具有时效性或存在争议时，应联网查询。若论文定义已经充分，不要为了装饰而搜索。不得把搜索结果摘要当作引用来源，也不得把无来源聚合站或维基百科作为重要定义的唯一权威。
 
-## 3. Write a concept entry
+## 3. 编写概念条目
 
-Each important concept should answer:
+每个重要概念都应回答：
 
-- **一句话通俗解释**：what it means without relying on the term itself;
-- **技术含义**：necessary conditions, mechanism, variables, or formal meaning;
-- **本文中的角色**：why this paper needs the concept;
-- **边界与易混概念**：what it is not, nearby terms, and where usage differs;
-- **依据**：`论文定义` / `外部来源` / `LLM 综合`, with paper location or external citation;
-- **可信度**：high/medium/low when the explanation requires inference or sources disagree.
+- **一句话通俗解释**：不借助该术语本身，它是什么意思；
+- **技术含义**：必要条件、机制、变量或形式化含义；
+- **本文中的角色**：本文为什么需要这个概念；
+- **边界与易混概念**：它不是什么、有哪些相邻术语、不同来源的用法有何差异；
+- **依据**：`论文定义`、`外部来源` 或 `LLM 综合`，并附论文位置或外部引用；
+- **可信度**：当解释需要推断或不同来源存在冲突时，标为高、中或低。
 
-Use prose for the concepts that form the paper's conceptual spine. A table may compact the remaining entries, but must not reduce a disputed concept to a one-line dictionary gloss.
+对构成论文概念主线的术语使用解释性文字。其余条目可以表格压缩，但不得把有争议的概念缩减成一行词典释义。
 
 ```markdown
-### [概念名]（[English term / acronym]）
+### [概念名]（[英文术语或缩写]）
 
 **通俗解释：** …
 
@@ -47,36 +47,36 @@ Use prose for the concepts that form the paper's conceptual spine. A table may c
 
 **边界：** 与 `[相邻概念]` 的区别是 …；本文采用的是 … 口径。
 
-**依据：** [论文定义，p. X, §Y / 外部来源：作者或机构，标题，URL/DOI，访问日期 / LLM 综合]
+**依据：** [论文定义，p. X, §Y / 外部来源：作者或机构，标题，URL 或 DOI，访问日期 / LLM 综合]
 **可信度：** 高/中/低；[必要说明]
 ```
 
-## 4. Resolve conflicts
+## 4. 处理定义冲突
 
-When definitions conflict, do not silently choose one. State:
+不同定义冲突时，不得静默选择其中一个。需要说明：
 
-1. the paper's operational meaning;
-2. the alternative meaning and its source;
-3. whether the disagreement is terminological, methodological, or substantive;
-4. how it changes the review's grouping, comparison, or conclusion.
+1. 论文实际采用的操作性含义；
+2. 另一种含义及其来源；
+3. 分歧属于术语、方法还是实质内容；
+4. 它如何改变综述中的分组、比较或结论。
 
-For a review paper, distinguish **author-proposed taxonomy**, **field-established taxonomy**, and **analyst reconstruction**. Label merged categories and inferred relationships explicitly.
+对于综述论文，区分**作者提出的分类体系**、**领域既有分类体系**和**分析者重构**。合并类别和推断关系必须明确标注。
 
-## 5. Keep provenance separate
+## 5. 分离来源记录
 
-Paper claims remain anchored to the paper. External concept sources belong in a separate list:
+论文主张始终定位到论文。外部概念来源放入独立列表：
 
 | 概念 | 外部来源 | 用途 | 访问日期 |
 |---|---|---|---|
 
-An external source may clarify terminology; it does not become evidence for the reviewed paper's empirical or synthesis conclusions. If no suitable source is available, say so and label the explanation `LLM 综合 / 待核验`.
+外部来源可以澄清术语，但不能因此成为焦点论文实证结论或综合结论的证据。若找不到合适来源，明确说明，并标为 `LLM 综合 / 待核验`。
 
-## 6. Add retrieval cues
+## 6. 增加检索线索
 
-Turn the conceptual spine into 3–7 non-trivial questions that can be answered from the note, for example:
+将概念主线转化为 3–7 个能够从笔记中回答、且不是简单背诵的问题，例如：
 
-- Why does the paper distinguish A from B, and which conclusions depend on that boundary?
-- Under what conditions does method C cease to fit the paper's definition of D?
-- Which disagreement disappears when two sources use the same operational definition?
+- 论文为什么区分 A 和 B？哪些结论依赖这条边界？
+- 在什么条件下，方法 C 不再符合论文对 D 的定义？
+- 当两个来源使用相同的操作性定义时，哪个争议会消失？
 
-Prefer questions that test relationships, boundaries, and use cases over simple term recall.
+优先设计检验关系、边界和应用场景的问题，而不是只要求回忆术语。

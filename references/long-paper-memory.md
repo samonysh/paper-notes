@@ -1,44 +1,44 @@
-# Long-paper and memory protocol
+# 长论文与记忆协议
 
-Use this protocol when the paper or resulting note would impose high navigation or recall cost. Common signals include a long or appendix-heavy PDF, more than roughly eight substantive themes, more than roughly twelve central concepts, dense cross-references, or a note that cannot be re-entered quickly. These are heuristics, not mandatory thresholds; activate the mode when it improves use.
+当论文或生成的笔记会造成较高的导航或记忆成本时，使用本协议。常见信号包括 PDF 很长或附录密集、实质性主题超过约八个、核心概念超过约十二个、交叉引用密集，或读者无法快速重新进入笔记。这些只是启发式信号，不是强制门槛；只有在确实改善使用体验时才启用该模式。
 
-The objective is not merely to shorten the note. Preserve the evidence while giving readers several entry depths and reliable ways to recover forgotten context.
+目标不只是缩短笔记，而是在保留证据的同时，为读者提供多种进入深度和可靠的遗忘恢复路径。
 
-## 1. Build a reading map first
+## 1. 先建立阅读地图
 
-Before drafting prose, map the paper:
+写作前绘制论文结构：
 
-| Section/range | Function in the argument | Reading depth | Why | Output destination |
+| 章节或页码范围 | 在论证中的作用 | 阅读深度 | 原因 | 输出位置 |
 |---|---|---|---|---|
-| … | framing/method/evidence/appendix | deep/targeted/skimmed/unreadable | … | main note/supplement/omitted |
+| … | 背景/方法/证据/附录 | 深读/定向阅读/略读/不可读 | … | 主笔记/附录/省略 |
 
-Record skipped, skimmed, inaccessible, or OCR-uncertain regions. Do not imply full coverage when reading was selective.
+记录略读、跳过、无法访问或 OCR 不确定的区域。选择性阅读时不得暗示已经完整覆盖论文。
 
-## 2. Provide four entry depths
+## 2. 提供四层进入深度
 
-The main note starts with four clearly distinguishable layers:
+主笔记开头提供四个清晰区分的层级：
 
-1. **L0 — 30-second orientation**: one-sentence takeaway, paper type, why it matters, largest conclusion-changing risk.
-2. **L1 — 3-to-5-minute overview**: 200–300 words covering problem/scope, approach or synthesis method, strongest evidence, conclusion, and boundary.
-3. **L2 — 10-to-20-minute conceptual spine**: the minimum concepts and argument chain needed to understand the paper.
-4. **L3 — evidence on demand**: detailed methods, equations, tables, study clusters, related papers, and audits.
+1. **L0｜30 秒定位**：一句话结论、论文类型、重要性以及最可能改变结论的风险；
+2. **L1｜3–5 分钟概览**：用 200–300 字说明问题或范围、方法或综合方式、最强证据、结论和边界；
+3. **L2｜10–20 分钟概念主线**：理解论文所需的最少概念和论证链；
+4. **L3｜按需查看证据**：详细方法、公式、表格、研究簇、关联论文和审计记录。
 
-L0–L2 must be understandable without opening supplements. Each compression level is derived from the same evidence and must not introduce a stronger claim than the detailed note.
+即使不打开附录，L0–L2 也必须能够独立理解。每个压缩层都来自同一组证据，不能提出比详细笔记更强的结论。
 
-## 3. Add goal-based reading paths
+## 3. 增加目标导向阅读路径
 
-Near the top, link to the sections needed for common goals. Adapt the paths to actual content:
+在靠近笔记开头的位置，为常见目标链接必要章节，并根据实际内容调整：
 
-- **Quick understanding**: L0 → key concepts → strongest result/synthesis → largest limitation.
-- **Reproduction or implementation**: method → data/materials → evaluation → reproduction card.
-- **Literature-review writing**: scope → concept boundaries → synthesis matrix → disputes/gaps → related literature.
-- **Presentation or teaching**: L0 → conceptual spine/diagram → three evidence points → two caveats.
+- **快速理解**：L0 → 关键概念 → 最强结果或综合结论 → 最大局限；
+- **复现或实现**：方法 → 数据或材料 → 评估 → 复现卡；
+- **文献综述写作**：范围 → 概念边界 → 综合矩阵 → 争议和缺口 → 关联文献；
+- **汇报或教学**：L0 → 概念主线或图示 → 三条证据 → 两项限定条件。
 
-Do not list a path to an empty or inapplicable section.
+不得链接到空章节或不适用章节。
 
-## 4. Use memory anchors sparingly
+## 4. 节制使用记忆锚点
 
-Start a substantial analytical section with a compact anchor when readers would otherwise need to reconstruct context:
+当读者必须重建上下文才能理解一个较长分析章节时，在开头加入紧凑锚点：
 
 ```markdown
 > **本节记忆锚点**
@@ -50,32 +50,32 @@ Start a substantial analytical section with a compact anchor when readers would 
 > - 最容易混淆或忘记：
 ```
 
-Do not repeat the block mechanically for short sections. End a long section with one or two retrieval questions or a short bridge to the next section.
+短章节不要机械重复该模块。长章节结尾加入一两个检索问题，或一条通向下一章节的过渡。
 
-## 5. Organize concepts as clusters
+## 5. 使用概念簇组织概念
 
-For a concept-heavy paper, group concepts by relationship rather than presenting one long glossary:
+对于概念密集的论文，按关系分组，不要只提供一张很长的词典：
 
-- parent/subtype;
-- component/system;
-- cause/effect;
-- competing schools or methods;
-- historical replacement;
-- commonly confused terms.
+- 上位概念与子类型；
+- 组件与系统；
+- 原因与结果；
+- 竞争学派或方法；
+- 历史替代；
+- 容易混淆的术语。
 
-Each cluster begins with a short relationship statement. Concept entries still follow the concept-explanation protocol and retain provenance.
+每个概念簇先用一句短文说明关系。具体概念条目仍须遵守概念解释协议并保留来源。
 
-## 6. Create a retrieval pack
+## 6. 创建检索练习包
 
-At the end, write 5–8 high-value questions across three levels:
+在结尾编写 5–8 个高价值问题，并覆盖三个层级：
 
-- **Recognition**: identify the concept, result, or distinction.
-- **Explanation**: explain why a relation, method, or conclusion holds.
-- **Transfer**: apply it to a new case or state when it would fail.
+- **识别**：识别概念、结果或区别；
+- **解释**：说明某个关系、方法或结论为何成立；
+- **迁移**：将其应用到新案例，或说明它何时失效。
 
-Answers must be recoverable through links or location anchors in the note. Avoid trivia and questions whose answer is only a name or date.
+答案必须能够通过笔记中的链接或位置锚点恢复。避免琐碎问题，也不要设计答案只是名称或日期的问题。
 
-Add a compact recovery block:
+加入紧凑的恢复模块：
 
 ```markdown
 ## 遗忘后从这里恢复
@@ -87,14 +87,14 @@ Add a compact recovery block:
 - 重新进入正文：
 ```
 
-This is a reconstruction aid, not another summary of every section.
+该模块用于重建理解，不是对所有章节的再次摘要。
 
-## 7. Split only when navigation improves
+## 7. 只有在改善导航时才拆分
 
-Default to one Markdown note. Use a small bundle when keeping everything in one file would bury L0–L2 or make evidence hard to retrieve:
+默认生成一个 Markdown 笔记。当单文件会淹没 L0–L2 或使证据难以检索时，使用小型目录结构：
 
 ```text
-[first-author-year]--[short-title]/
+[第一作者-年份]--[短标题]/
 |-- index.md
 |-- concepts.md
 |-- evidence.md
@@ -102,47 +102,47 @@ Default to one Markdown note. Use a small bundle when keeping everything in one 
 `-- figures/
 ```
 
-Rules:
+规则：
 
-- `index.md` is the only required entry point and contains L0–L2, key conclusions, boundaries, and links.
-- Create only supplements that contain substantial material; never create empty placeholders.
-- Keep one source of truth for each claim. The main note summarizes and links instead of duplicating detailed tables.
-- Use stable relative links and meaningful headings.
-- A bundle is still one deliverable. Do not split mechanically by the paper's section numbers.
-- If the user requested a single file, keep one file and place low-priority detail in appendices or portable `<details>` blocks.
+- `index.md` 是唯一必需入口，包含 L0–L2、关键结论、边界和链接；
+- 只有确有大量内容时才创建附录，不得创建空占位文件；
+- 每个断言只保留一个详细事实来源。主笔记负责总结和链接，不重复复制详细表格；
+- 使用稳定的相对链接和有意义的标题；
+- 一个目录仍是一份交付物。不得按照原论文章节编号机械拆分；
+- 若用户明确要求单文件，则保留一个文件，并把低优先级细节放入附录或可移植的 `<details>` 折叠块。
 
-## 8. Paper-type checkpoints
+## 8. 按论文类型设置检查点
 
-For a research paper, each method/result module should make recoverable: purpose, inputs, mechanism, evidence, and failure boundary.
+对于研究论文，每个方法或结果模块都应便于恢复以下内容：目的、输入、机制、证据和失效边界。
 
-For a review paper, each theme should make recoverable:
+对于综述论文，每个主题都应便于恢复：
 
-- the question the theme addresses;
-- its dominant routes or theories;
-- where evidence agrees;
-- whether disagreements arise from definitions, data, methods, settings, or time;
-- the most defensible current conclusion.
+- 该主题回答什么问题；
+- 主流路线或理论是什么；
+- 证据在哪些方面一致；
+- 分歧来自定义、数据、方法、场景还是时间；
+- 当前最可靠的结论是什么。
 
-## 9. Optional review state
+## 9. 可选复习状态
 
-Only when useful to the user's workflow, add:
+只有在对用户工作流有帮助时，才增加：
 
 ```yaml
-memory_status: "new | reviewed | stable | needs-review"
+memory_status: "新建 | 已复习 | 稳定 | 需复习"
 last_reviewed: null
 next_review: null
 ```
 
-If the user has no review schedule, suggest checkpoints after the initial read, after a short delay, and after a longer delay rather than claiming a universal optimal interval. Update status from actual recall performance, not merely from rereading.
+若用户没有复习计划，可以建议在初次阅读后、较短延迟后和较长延迟后进行检查，但不要声称存在适用于所有人的最佳间隔。状态应根据实际回忆表现更新，而不是根据是否重新阅读更新。
 
-## 10. Compression quality check
+## 10. 压缩质量检查
 
-Before delivery, verify:
+交付前确认：
 
-- a reader can identify the paper and its value from L0;
-- L1 states evidence and boundary, not only topic;
-- L2 shows relations among concepts and claims;
-- details remain traceable from summaries;
-- memory anchors reduce context reconstruction rather than repeat headings;
-- the recovery block points back into the note;
-- splitting, if used, reduces navigation cost and leaves no orphan supplement.
+- 读者能从 L0 判断论文是什么以及为何重要；
+- L1 同时说明证据和边界，而不只是主题；
+- L2 展示概念与断言之间的关系；
+- 摘要能够追溯到详细证据；
+- 记忆锚点减少上下文重建，而不是重复标题；
+- 恢复模块能够链接回笔记正文；
+- 若使用拆分结构，它确实降低导航成本，且不存在孤立附录。

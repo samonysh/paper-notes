@@ -1,25 +1,25 @@
-# Review-paper note template
+# 综述论文笔记模板
 
-Use for narrative, systematic, scoping, mapping, meta-analysis, survey and umbrella reviews. Do not call a review systematic unless it reports a reproducible search/selection procedure.
+适用于叙述性综述、系统综述、范围综述、映射研究、元分析、调研论文和伞式综述。只有论文报告了可复现的检索与筛选过程，才能称为系统综述。
 
 ```markdown
 ---
-title: "[Paper title]"
-authors: "[Authors]"
+title: "[论文标题]"
+authors: "[作者]"
 year: [YYYY]
-paper_type: "review"
-review_type: "[narrative/systematic/scoping/mapping/meta-analysis/umbrella/uncertain]"
-venue: "[Venue / status]"
-identifiers: { doi: "[DOI or null]", arxiv: "[ID/version or null]" }
-source: "[Canonical URL or local file]"
-analyzed_version: "[Version/date]"
+paper_type: "综述论文"
+review_type: "[叙述性综述/系统综述/范围综述/映射研究/元分析/伞式综述/不确定]"
+venue: "[发表场所/状态]"
+identifiers: { doi: "[DOI 或 null]", arxiv: "[编号/版本或 null]" }
+source: "[规范 URL 或本地文件]"
+analyzed_version: "[版本/日期]"
 access_date: "[YYYY-MM-DD]"
-note_mode: "[standard/long-paper]"
-memory_status: "[new/reviewed/stable/needs-review]"
-tags: ["[topic]", "review"]
+note_mode: "[标准/长论文]"
+memory_status: "[新建/已复习/稳定/需复习]"
+tags: ["[主题]", "综述"]
 ---
 
-# [Short title] — 综述论文笔记
+# [短标题] — 综述论文笔记
 
 ## 导航：选择阅读深度
 - **L0｜30 秒**：阅读一句话总结、概念主线、最重要结论和最大风险。
@@ -146,8 +146,8 @@ tags: ["[topic]", "review"]
 
 ### 10.3 关联论文检索记录（如有）
 - 检索工具/路线、查询或种子、日期、选择与停止规则。
-- 对每篇保留 canonical URL/DOI/arXiv ID、版本与访问层级。
-- papers.cool 结果同时保留发现页与 canonical source；不得把 REL 描述为引用关系。
+- 对每篇保留规范 URL、DOI 或 arXiv 编号、版本与访问层级。
+- papers.cool 结果同时保留发现页与规范来源；不得把 REL 描述为引用关系。
 
 ## 11. 检索练习与洞见卡
 - 写 5–8 个问题并标注层级：识别（是什么）、解释（为什么）、迁移（何时适用或失效）。优先考查概念边界、主题关系、争议来源和适用条件。

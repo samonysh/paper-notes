@@ -1,22 +1,22 @@
-# Research-paper note template
+# 研究论文笔记模板
 
 ```markdown
 ---
-title: "[Paper title]"
-authors: "[Authors]"
+title: "[论文标题]"
+authors: "[作者]"
 year: [YYYY]
-paper_type: "research"
-venue: "[Venue / status]"
-identifiers: { doi: "[DOI or null]", arxiv: "[ID/version or null]" }
-source: "[Canonical URL or local file]"
-analyzed_version: "[Version/date]"
+paper_type: "研究论文"
+venue: "[发表场所/状态]"
+identifiers: { doi: "[DOI 或 null]", arxiv: "[编号/版本或 null]" }
+source: "[规范 URL 或本地文件]"
+analyzed_version: "[版本/日期]"
 access_date: "[YYYY-MM-DD]"
-note_mode: "[standard/long-paper]"
-memory_status: "[new/reviewed/stable/needs-review]"
-tags: ["[topic]", "[method]", "[domain]"]
+note_mode: "[标准/长论文]"
+memory_status: "[新建/已复习/稳定/需复习]"
+tags: ["[主题]", "[方法]", "[领域]"]
 ---
 
-# [Short title] — 论文笔记
+# [短标题] — 论文笔记
 
 ## 导航：选择阅读深度
 - **L0｜30 秒**：阅读“一句话总结、最大局限、适用边界”。
@@ -38,7 +38,7 @@ tags: ["[topic]", "[method]", "[domain]"]
 | 一句话总结（L0） | [问题—方法—最强证据—意义] |
 | 50–80 字压缩 | [问题—做法—结果—边界] |
 | 200–300 字摘要（L1） | [问题、方法、最强证据、结论及不能推出什么] |
-| 研究问题 | [RQ/hypothesis] |
+| 研究问题 | [研究问题/假设] |
 | 核心贡献 | [≤3项，区分作者主张] |
 | 最强证据 | [结果 + 比较对象 + 位置] |
 | 最大局限 | [会改变结论边界的局限] |
@@ -134,7 +134,7 @@ tags: ["[topic]", "[method]", "[domain]"]
 
 ### 8.3 关联论文检索记录（如有）
 - 检索工具/路线、查询或种子、日期、选择与停止规则。
-- 对每篇保留 canonical URL/DOI/arXiv ID 与访问层级。
+- 对每篇保留规范 URL、DOI 或 arXiv 编号与访问层级。
 
 ## 9. 检索练习与洞见卡
 - 写 5–8 个问题并标注层级：识别（是什么）、解释（为什么）、迁移（何时适用或失效）。答案必须链接到笔记位置。

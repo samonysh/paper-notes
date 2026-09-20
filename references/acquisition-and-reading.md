@@ -1,46 +1,48 @@
-# Acquisition and reading protocol
+# 论文获取与阅读协议
 
-## Source record
+## 来源记录
 
-Record the requested input, canonical PDF/landing URL, access date, arXiv/published version, title/authors/year/venue/DOI or ID, access level, and extraction quality (`native text`, `mixed`, `OCR`, or `unreadable regions`). Never silently substitute versions.
+记录用户提供的输入、规范 PDF 或落地页 URL、访问日期、arXiv 或正式发表版本、标题、作者、年份、发表场所、DOI 或其他标识符、访问层级，以及提取质量（`原生文本`、`混合`、`OCR` 或 `存在不可读区域`）。不得静默替换版本。
 
-## URL routing
+## URL 路由
 
-| Input | Procedure |
+| 输入类型 | 处理方式 |
 |---|---|
-| Local `.pdf` | Verify the file; extract metadata/text; inspect page count and render difficult pages. |
-| arXiv abstract, PDF, HTML, or export URL | Normalize ID and requested version; retrieve the official PDF endpoint; retain the requested version. Landing metadata supplements, not replaces, PDF. |
-| DOI/publisher URL | Resolve landing page; use an authoritative open PDF or a supplied copy. Do not evade access controls. |
-| Institutional repository | Verify title/authors/version against its metadata; retrieve the openly supplied PDF. |
-| HTML full text | Read complete accessible content; cite section anchors when PDF pages do not exist. |
+| 本地 `.pdf` | 验证文件；提取元数据和文本；检查页数，并渲染难以解析的页面。 |
+| arXiv 摘要、PDF、HTML 或导出 URL | 规范化论文编号和指定版本；从官方 PDF 端点获取文件；保留用户指定的版本。落地页元数据只能补充 PDF，不能替代 PDF。 |
+| DOI 或出版社 URL | 解析落地页；使用权威的开放 PDF 或用户提供的副本。不得规避访问控制。 |
+| 机构仓库 | 根据仓库元数据核对标题、作者和版本；获取其公开提供的 PDF。 |
+| HTML 全文 | 阅读全部可访问内容；没有 PDF 页码时使用章节锚点。 |
 
-If content is inaccessible, state what was available and produce only a labelled metadata/abstract-level note.
+若内容不可访问，说明实际可获得的材料，并且只生成明确标注的元数据级或摘要级笔记。
 
-## Coverage map for long papers
+## 长论文覆盖地图
 
-Before detailed extraction, map section/page ranges to their role in the argument and intended reading depth (`deep`, `targeted`, `skimmed`, `unreadable`). Record why selective reading is sufficient and where each module will appear in the output. Revisit the map whenever a later claim depends on a region initially skimmed.
+详细提取前，将章节或页码范围映射到其在论证中的作用和计划阅读深度（`深读`、`定向阅读`、`略读`、`不可读`）。记录选择性阅读为何足够，以及每个模块将写入哪个输出位置。若后续断言依赖最初略读的区域，必须返回并重新检查。
 
-A long-paper note must state its actual coverage. Length is not permission to omit evidence silently, and exhaustive transcription is not a substitute for identifying the argument.
-## Evidence ledger
+长论文笔记必须说明真实覆盖范围。论文篇幅长不能成为静默遗漏证据的理由，逐页抄录也不能替代对论证结构的识别。
 
-| Claim/field | Value or paraphrase | Evidence location | Evidence kind | Confidence | Caveat |
+## 证据账本
+
+| 断言或字段 | 值或转述 | 证据位置 | 证据类型 | 可信度 | 限定条件 |
 |---|---|---|---|---|---|
-| Main problem | `…` | `p. 1, §1` | author statement | high | — |
-| Result R1 | `…` | `p. 8, Table 3` | reported result | high | specific dataset |
-| Limitation | `…` | `p. 10, §6` | author statement | medium | no external validation |
-| Interpretation | `…` | `inference from R1/R2` | analyst inference | medium | needs replication |
+| 主要问题 | `…` | `p. 1, §1` | 作者陈述 | 高 | — |
+| 结果 R1 | `…` | `p. 8, Table 3` | 报告结果 | 高 | 仅适用于特定数据集 |
+| 局限 | `…` | `p. 10, §6` | 作者陈述 | 中 | 未做外部验证 |
+| 分析解释 | `…` | `根据 R1/R2 推断` | 分析者推断 | 中 | 需要复现 |
 
-Use two passes: map the argument from abstract, introduction, figures/tables, conclusion; then inspect methods, results, appendices, validity threats and evidence needed by the note. For empirical papers capture sample/data provenance, splits, baselines, metrics and uncertainty; for qualitative work capture setting, participants, collection, coding, reflexivity and transferability; for theoretical work capture notation, assumptions, theorem/claim numbers and proof dependencies.
+使用两遍阅读：先从摘要、引言、图表和结论绘制论证结构；再检查方法、结果、附录、有效性威胁以及笔记需要的证据。对于实证研究，记录样本或数据来源、划分方式、基线、指标和不确定性；对于定性研究，记录情境、参与者、材料收集、编码、反身性和可迁移性；对于理论研究，记录符号、假设、定理或断言编号及其证明依赖。
 
-Maintain a separate concept-source ledger when external material is used. Record concept, canonical source, source type, access date, the point clarified, and whether the resulting explanation is quoted, paraphrased, or LLM-synthesized. External context must not be presented as if it appeared in the paper.
+使用外部材料解释概念时，维护独立的概念来源账本。记录概念、规范来源、来源类型、访问日期、被澄清的问题，以及最终解释属于引文、转述还是 LLM 综合。不得让外部背景看起来像论文原文内容。
 
-## Related-paper ledger
+## 关联论文账本
 
-When a cited or externally discovered paper is read, record its relationship to the focal paper, canonical identifier/URL, version read, access level, relevant passage location, extracted point, and selection rationale. Keep `本文引用` separate from `检索补充`, and never describe keyword-similar papers as citation-linked without citation evidence.
-## Figure/table/equation rule
+阅读被引或外部发现的论文时，记录它与焦点论文的关系、规范标识符或 URL、实际阅读版本、访问层级、相关段落位置、提取内容和选择理由。区分 `本文引用` 与 `检索补充`；在没有引用关系证据时，不得把关键词相似论文描述为引用关联。
 
-Read captions, axes/legends and nearby interpretation together. State what an exhibit supports and does not support. Recreate only a small transparent derived table/chart; otherwise cite its location. Flag unreadable scans, truncated appendices and OCR uncertainty.
+## 图、表与公式规则
 
-## Quality pass
+将标题、坐标轴或图例以及附近的作者解释一起阅读。说明一个图表能够支持什么、不能支持什么。只重建少量且推导过程透明的表格或图；其他情况引用原位置。标注不可读扫描页、截断附录和 OCR 不确定性。
 
-Every main claim needs a location; every number needs unit, baseline and condition; version and actual reading coverage are explicit; author claims, external context, and analyst critique are distinct; concept explanations show their basis; layered summaries do not overstate the detailed evidence; no conclusion exceeds the evidence.
+## 质量检查
+
+每个主要断言都有位置；每个数字都有单位、基线和条件；版本和实际阅读覆盖明确；作者主张、外部背景与分析者评价相互区分；概念解释说明依据；分层摘要没有超出详细证据；任何结论都不超过证据边界。

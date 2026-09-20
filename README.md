@@ -1,50 +1,53 @@
 # paper-notes
 
-A Codex skill for turning an academic paper PDF or URL into an evidence-traceable Chinese Markdown note.
+一个 Codex 技能，用于将学术论文 PDF 或 URL 转换为证据可追溯的中文 Markdown 笔记。
 
-## What it adds
+为兼容 Codex 和下游工具，项目名、文件名、YAML 键、工具名、URL、DOI、arXiv 等机器标识保持原样；其余说明、模板提示和检查项均使用中文。
 
-- paper claims, evidence, external context, and analyst judgments are explicitly separated;
-- research papers and review papers use different note structures;
-- long papers use layered entry depths, reading paths, memory anchors, and a recovery pack;
-- important concepts receive plain-language and technical explanations with provenance labels;
-- a bounded set of cited or related papers is retrieved and selectively read;
-- review notes synthesize by theme and evidence relationship instead of listing papers one by one;
-- diagrams are created only when they improve understanding.
+## 主要能力
 
-## Long-paper mode
+- 明确区分论文主张、文中证据、外部背景和分析者判断；
+- 为研究论文和综述论文采用不同的笔记结构；
+- 为长论文提供分层入口、阅读路径、记忆锚点和恢复模块；
+- 为重要概念提供带来源标签的通俗解释和技术解释；
+- 检索并选择性深读数量受控的被引或关联论文；
+- 综述笔记按主题和证据关系进行综合，而不是逐篇罗列摘要；
+- 只有在确实提升理解时才创建图示。
 
-When length or conceptual density makes a paper hard to re-enter, the skill adds:
+## 长论文模式
 
-- L0–L3 reading depths, from a 30-second orientation to evidence on demand;
-- goal-based reading paths for quick understanding, reproduction, review writing, or presentation;
-- selective memory anchors and concept clusters;
-- recognition, explanation, and transfer questions;
-- an “遗忘后从这里恢复” reconstruction block;
-- an optional `index.md` plus small supplements bundle when one file would bury the core argument.
+当论文长度或概念密度使其难以重新进入时，本技能 会增加：
 
-Page count is only a heuristic. The mode activates when it lowers navigation and recall cost without hiding evidence.
-## Concept provenance
+- L0–L3 阅读深度，从 30 秒定位到按需查看证据；
+- 面向快速理解、复现、综述写作或汇报的目标导向阅读路径；
+- 选择性的记忆锚点和概念簇；
+- 识别、解释和迁移三级检索练习；
+- “遗忘后从这里恢复”模块；
+- 当单文件会淹没核心论证时，可选用 `index.md` 加少量附录的目录结构。
 
-Every enriched concept is labelled as one or more of:
+页数只是启发式信号。只有在不隐藏证据且能够降低导航和记忆成本时，才启用长论文模式。
 
-- **论文定义** — the focal paper's own definition, with location;
-- **外部来源** — a cited/original or authoritative source, with URL/identifier and access date;
-- **LLM 综合** — a plain-language synthesis that is not treated as scholarly evidence.
+## 概念来源标记
 
-External explanations and related-paper findings never enter the focal paper's evidence ledger.
+每个扩展解释的概念都会标为以下一种或多种来源：
 
-## Related-paper retrieval
+- **论文定义**：焦点论文自身的定义，并附位置；
+- **外部来源**：论文引用的原始来源或权威来源，并附 URL、标识符和访问日期；
+- **LLM 综合**：用于帮助理解的通俗化综合，不作为学术证据。
 
-The skill routes retrieval by purpose:
+外部概念解释和关联论文发现不会进入焦点论文的证据账本。
 
-- `papers-cool-search` for focused, current AI/CS discovery;
-- `paper-search` or authoritative indexes for exact citations, broader disciplines, and fuller coverage;
-- canonical publisher/repository pages for version and passage verification.
+## 关联论文检索
 
-A note normally deepens only 3–8 related papers. Keyword similarity is not described as a citation relationship.
+本技能 按检索目的选择路径：
 
-## Structure
+- 使用 `papers-cool-search` 发现当前 AI、计算机科学主题的论文；
+- 使用 `paper-search` 或权威索引处理精确引文、跨学科检索和更完整覆盖；
+- 使用出版社或仓库的规范页面核验版本和原文段落。
+
+一份笔记通常只深读 3–8 篇关联论文。关键词相似不会被描述为引用关系。
+
+## 项目结构
 
 ```text
 paper-notes/
@@ -61,25 +64,25 @@ paper-notes/
     └── visual-note-spec.md
 ```
 
-## Design references
+## 设计参考
 
-The templates adapt several established note and review practices:
+模板吸收了以下成熟的笔记和综述实践：
 
-- [Cornell Note-Taking System](https://lsc.cornell.edu/notes.html): concise summaries, retrieval cues, questions, reflection, and review.
-- [University of Sheffield literature review guidance](https://www.sheffield.ac.uk/study-skills/writing/critical/literature-review): literature and synthesis matrices organized around themes and relationships among sources.
-- [George Mason University Writing Center on literature-review organization](https://writingcenter.gmu.edu/writing-resources/research-based-writing/organizing-literature-reviews-the-basics): synthesis rather than a chain of source summaries.
-- [Purdue OWL literature review guidance](https://owl.purdue.edu/owl/research_and_citation/conducting_research/writing_a_literature_review.html): summarize, synthesize, analyze, interpret, and critically evaluate.
-- [PRISMA 2020](https://www.prisma-statement.org/prisma-2020): reporting checks for systematic reviews, used here as reporting guidance rather than a quality score.
-- [Zettelkasten literature/permanent note workflow](https://zettelkasten.de/posts/concepts-sohnke-ahrens-explained/): self-contained, reusable notes written in the reader's own words.
+- [康奈尔笔记系统](https://lsc.cornell.edu/notes.html)：简洁摘要、检索线索、问题、反思和复习；
+- [谢菲尔德大学文献综述指南](https://www.sheffield.ac.uk/study-skills/writing/critical/literature-review)：围绕主题和来源关系组织文献矩阵与综合矩阵；
+- [乔治梅森大学写作中心的文献综述组织方法](https://writingcenter.gmu.edu/writing-resources/research-based-writing/organizing-literature-reviews-the-basics)：强调综合，而不是串联来源摘要；
+- [普渡大学在线写作实验室的文献综述指南](https://owl.purdue.edu/owl/research_and_citation/conducting_research/writing_a_literature_review.html)：要求总结、综合、分析、解释和批判性评价；
+- [PRISMA 2020](https://www.prisma-statement.org/prisma-2020)：用于检查系统综述报告项目，而不是充当质量评分；
+- [卡片盒笔记法中的文献笔记与永久笔记流程](https://zettelkasten.de/posts/concepts-sohnke-ahrens-explained/)：使用自己的语言编写自包含、可复用的笔记。
 
-These sources informed the structure; the repository does not reproduce their templates verbatim.
+这些来源用于指导结构设计；本仓库没有逐字复制其模板。
 
-## Use
+## 使用方法
 
-Invoke the skill with a local PDF or paper URL:
+提供本地 PDF 或论文 URL，并调用本技能：
 
 ```text
-Use $paper-notes to read this paper and create a Chinese Markdown note with layered reading paths, evidence locations, concept explanations, memory recovery, and related-paper verification.
+使用 $paper-notes 阅读这篇论文，生成包含分层阅读路径、证据定位、概念解释、记忆恢复和关联论文核验的中文 Markdown 笔记。
 ```
 
-The skill is designed for analysis and note construction, not full-paper translation.
+本技能 面向论文分析和笔记构建，不用于整篇论文翻译。

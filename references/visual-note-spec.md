@@ -1,25 +1,25 @@
-# Visual-note specification
+# 可视化笔记规范
 
-## Selection and output
+## 选择与输出
 
-Only draw a diagram when it reveals a relationship, process, hierarchy, trade-off, or time pattern more clearly than prose/table. A full note normally uses 2–5 visuals; a short or metadata-only note may use none. Every visual has a purpose, source anchors (`derived from p. …`), an extracted-fact versus analyst-synthesis boundary, and Markdown alt text.
+只有当图示比文字或表格更清楚地呈现关系、过程、层级、权衡或时间变化时才绘图。完整笔记通常使用 2–5 个图示；短笔记或元数据级笔记可以不使用图示。每个图示都必须说明用途、来源锚点（如 `根据 p. … 整理`）、原文事实与分析者综合的边界，并提供 Markdown 替代文本。
 
-Use `diagram-design` with default **minimal-light** `assets/template.html`, self-contained HTML, and `doc-wide` size for Markdown notes. Save in the note's sibling `figures/` directory. Apply its style gate, chosen type/semantic-pattern reference, accessibility contract, complexity budget and self-check. Do not substitute Mermaid, screenshots or ASCII. Do not export PNG/SVG unless requested.
+使用 `diagram-design`，默认采用 **minimal-light** 的 `assets/template.html`、自包含 HTML，以及适合 Markdown 笔记的 `doc-wide` 尺寸。保存到笔记同级的 `figures/` 目录。执行该 skill 的风格门控，读取所选图示类型和语义模式参考，并遵守可访问性约定、连接线规则、复杂度预算和自检要求。不得改用 Mermaid、截图或 ASCII 图。除非用户要求，否则不导出 PNG 或 SVG。
 
-## Visual plan
+## 可视化计划
 
-| Paper | Priority | Visual | Diagram-design type | Caution |
+| 论文类型 | 优先级 | 图示内容 | diagram-design 类型 | 注意事项 |
 |---|---:|---|---|---|
-| Research | 1 | Problem→method→evaluation chain | Process/Data flow | Label inferred transitions. |
-| Research | 2 | Architecture/components | Architecture/Layer stack/Tree | Only when interfaces are reported. |
-| Research | 3 | Experiment or data flow | Flowchart/Timeline/Process | Do not imply unreported controls. |
-| Research | 4 | Results comparison | Bar/Line/Scatter/Radar | Replot only unambiguous values. |
-| Research | 5 | Limitations/failure modes | Fishbone/Quadrant/Layer stack | Separate author and analyst risks. |
-| Review | 1 | Domain knowledge map | Tree/Nested/Layer stack | Avoid giant citation networks. |
-| Review | 2 | Field evolution | Timeline | Mark contested groupings. |
-| Review | 3 | Evidence selection | Flowchart | Never invent PRISMA counts. |
-| Review | 4 | Method/application comparison | Quadrant/Radar/Bar | Use table when axes are weak. |
-| Review | 5 | Gaps and roadmap | Process/Gantt/Fishbone | Label note synthesis explicitly. |
+| 研究论文 | 1 | 问题→方法→评估链 | 流程/数据流 | 标注推断得到的过渡。 |
+| 研究论文 | 2 | 架构与组件 | 架构图/分层堆栈/树图 | 只有论文报告接口时才绘制。 |
+| 研究论文 | 3 | 实验或数据流程 | 流程图/时间线/过程图 | 不得暗示未报告的控制条件。 |
+| 研究论文 | 4 | 结果比较 | 柱状图/折线图/散点图/雷达图 | 只重绘含义明确的数值。 |
+| 研究论文 | 5 | 局限与失效模式 | 鱼骨图/四象限/分层堆栈 | 区分作者报告与分析者判断。 |
+| 综述论文 | 1 | 领域知识地图 | 树图/嵌套图/分层堆栈 | 避免庞大的引用网络。 |
+| 综述论文 | 2 | 领域演化 | 时间线 | 标注存在争议的阶段划分。 |
+| 综述论文 | 3 | 证据筛选 | 流程图 | 不得虚构 PRISMA 数量。 |
+| 综述论文 | 4 | 方法或应用比较 | 四象限/雷达图/柱状图 | 比较轴较弱时改用表格。 |
+| 综述论文 | 5 | 缺口与路线图 | 过程图/甘特图/鱼骨图 | 明确标注为笔记综合。 |
 
 ```markdown
 ### 图 1. 方法与证据链
@@ -28,5 +28,4 @@ Use `diagram-design` with default **minimal-light** `assets/template.html`, self
 *图 1：基于论文 §3–§5 整理；箭头和分组是分析性概括，不代表作者原图。*
 ```
 
-For a numeric chart state metric, directionality, unit, dataset/task, and source table/figure. Never encode uncertain values as precise bars.
-
+数值图必须说明指标、方向、单位、数据集或任务，以及原始表格或图片位置。不得把不确定数值绘制成精确柱形。
