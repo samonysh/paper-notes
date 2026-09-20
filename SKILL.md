@@ -1,6 +1,6 @@
 ---
 name: paper-notes
-description: Read an academic-paper PDF or URL (including arXiv) and create evidence-traceable Markdown notes with concept explanations, related-literature enrichment, and review-oriented synthesis. Use for research-paper analysis, literature-review notes, paper reading notes, or structured paper summaries; not for translating an entire paper.
+description: Read an academic-paper PDF or URL (including arXiv) and create layered, evidence-traceable Markdown notes with concept explanations, related-literature enrichment, and review-oriented synthesis. Use for research-paper analysis, literature-review notes, paper reading notes, or structured paper summaries; not for translating an entire paper.
 metadata:
   short-description: Create evidence-linked notes from academic papers
 ---
@@ -31,6 +31,14 @@ Read the applicable template fully before drafting:
 - Research paper → [references/research-paper-template.md](references/research-paper-template.md)
 - Review paper → [references/review-paper-template.md](references/review-paper-template.md)
 
+## Adapt for length and memory
+
+Read [references/long-paper-memory.md](references/long-paper-memory.md) when the paper or resulting note would be difficult to navigate or retain. Signals include a long/appendix-heavy paper, many themes or central concepts, dense cross-references, or a note whose core argument is buried by detail; page and section counts are heuristics, not hard gates.
+
+- Start with L0–L3 entry depths: 30-second orientation, 3-to-5-minute overview, conceptual spine, then evidence on demand.
+- Add goal-based reading paths, selective section memory anchors, progressive compression, retrieval questions, and an “遗忘后从这里恢复” block.
+- Default to one Markdown file. When navigation genuinely improves, use one self-contained `index.md` plus only the substantial concept/evidence/related-literature supplements that are needed.
+- Keep detailed evidence traceable even when it is deferred. Record skimmed, omitted, inaccessible, or OCR-uncertain regions instead of implying full coverage.
 ## Explain concepts, not just mentions
 
 Read [references/concept-explanation-protocol.md](references/concept-explanation-protocol.md) whenever the paper contains field-specific, overloaded, newly coined, or structurally important concepts. This is normally required for a review paper because its taxonomy and conclusions depend on how concepts are grouped and distinguished.
@@ -51,7 +59,7 @@ Read [references/related-literature-protocol.md](references/related-literature-p
 ## Working standard
 
 1. Extract bibliographic identity, scope, structure, contribution claims, methods, evidence, limitations, central concepts, and references before writing prose.
-2. Use a two-pass reading pattern: first map the argument (abstract, introduction, figures/tables, conclusion); then inspect methods, results, appendices, threats to validity, and cited evidence needed for the note.
+2. Use a two-pass reading pattern: first map the argument and section roles; then inspect methods, results, appendices, validity threats, and cited evidence needed for the note. In long-paper mode, record reading depth and coverage before drafting.
 3. Preserve precision: report numbers with units, comparison baseline, test setting, dataset/sample, and the page or exhibit that supports them. Say “not reported” rather than guessing.
 4. Separate these labels explicitly where relevant: **作者主张**, **文中证据**, **外部背景**, **分析判断**, **待验证问题**.
 5. Paraphrase by default. Keep direct quotations short, necessary, and location-tagged. Do not reproduce long copyrighted passages, tables, or figures.
@@ -69,7 +77,7 @@ Default to a **narrative-first** note: the opening summary, problem framing, met
 - Explain a taxonomy as an argument: why its axes were chosen, what distinctions it preserves, and which dimensions may be coupled in practice.
 - For a review paper, synthesize each research thread in 1–3 analytical paragraphs before or after its matrix; do not simply enumerate themes.
 - For a research paper, explain the causal/technical chain from problem to method to evidence, then use tables for experimental settings and result contrasts.
-- A full-paper note normally has at least two substantive prose paragraphs in each major analytical section, except a compact bibliographic/audit section or a section whose source evidence is genuinely absent.
+- Use enough connected prose to explain each major analytical section, but do not enforce paragraph quotas. In long-paper mode, lead with a compact section summary and defer low-priority detail without losing evidence links.
 
 ## Visual notes
 
@@ -79,5 +87,4 @@ Use the installed `diagram-design` skill for every diagram. Its **minimal-light 
 
 ## Deliverable
 
-Create one UTF-8 Markdown file named `[first-author-year]--[short-title]--notes.md` (or a clear equivalent) plus only the diagrams that are genuinely used. Include concise frontmatter, a source/audit section, any external concept sources, and a final reading checklist. End with a short “how to use this note” summary suitable for future retrieval.
-
+Create one UTF-8 Markdown note by default, named `[first-author-year]--[short-title]--notes.md` (or a clear equivalent), plus only the diagrams genuinely used. For long-paper mode, a directory with a self-contained `index.md` and a small number of substantial supplements is also valid. Include concise frontmatter, reading/coverage audit, external sources, retrieval cues, a recovery block, and a final checklist. End with a short “how to use this note” summary suitable for future retrieval.

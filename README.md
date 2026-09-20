@@ -6,11 +6,24 @@ A Codex skill for turning an academic paper PDF or URL into an evidence-traceabl
 
 - paper claims, evidence, external context, and analyst judgments are explicitly separated;
 - research papers and review papers use different note structures;
+- long papers use layered entry depths, reading paths, memory anchors, and a recovery pack;
 - important concepts receive plain-language and technical explanations with provenance labels;
 - a bounded set of cited or related papers is retrieved and selectively read;
 - review notes synthesize by theme and evidence relationship instead of listing papers one by one;
 - diagrams are created only when they improve understanding.
 
+## Long-paper mode
+
+When length or conceptual density makes a paper hard to re-enter, the skill adds:
+
+- L0–L3 reading depths, from a 30-second orientation to evidence on demand;
+- goal-based reading paths for quick understanding, reproduction, review writing, or presentation;
+- selective memory anchors and concept clusters;
+- recognition, explanation, and transfer questions;
+- an “遗忘后从这里恢复” reconstruction block;
+- an optional `index.md` plus small supplements bundle when one file would bury the core argument.
+
+Page count is only a heuristic. The mode activates when it lowers navigation and recall cost without hiding evidence.
 ## Concept provenance
 
 Every enriched concept is labelled as one or more of:
@@ -41,6 +54,7 @@ paper-notes/
 └── references/
     ├── acquisition-and-reading.md
     ├── concept-explanation-protocol.md
+    ├── long-paper-memory.md
     ├── related-literature-protocol.md
     ├── research-paper-template.md
     ├── review-paper-template.md
@@ -65,7 +79,7 @@ These sources informed the structure; the repository does not reproduce their te
 Invoke the skill with a local PDF or paper URL:
 
 ```text
-Use $paper-notes to read this paper and create a Chinese Markdown note with evidence locations, concept explanations, and related-paper verification.
+Use $paper-notes to read this paper and create a Chinese Markdown note with layered reading paths, evidence locations, concept explanations, memory recovery, and related-paper verification.
 ```
 
 The skill is designed for analysis and note construction, not full-paper translation.

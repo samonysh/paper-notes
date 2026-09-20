@@ -16,6 +16,11 @@ Record the requested input, canonical PDF/landing URL, access date, arXiv/publis
 
 If content is inaccessible, state what was available and produce only a labelled metadata/abstract-level note.
 
+## Coverage map for long papers
+
+Before detailed extraction, map section/page ranges to their role in the argument and intended reading depth (`deep`, `targeted`, `skimmed`, `unreadable`). Record why selective reading is sufficient and where each module will appear in the output. Revisit the map whenever a later claim depends on a region initially skimmed.
+
+A long-paper note must state its actual coverage. Length is not permission to omit evidence silently, and exhaustive transcription is not a substitute for identifying the argument.
 ## Evidence ledger
 
 | Claim/field | Value or paraphrase | Evidence location | Evidence kind | Confidence | Caveat |
@@ -38,5 +43,4 @@ Read captions, axes/legends and nearby interpretation together. State what an ex
 
 ## Quality pass
 
-Every main claim needs a location; every number needs unit, baseline and condition; version is explicit; author claims, external context, and analyst critique are distinct; concept explanations show their basis; no conclusion exceeds the evidence.
-
+Every main claim needs a location; every number needs unit, baseline and condition; version and actual reading coverage are explicit; author claims, external context, and analyst critique are distinct; concept explanations show their basis; layered summaries do not overstate the detailed evidence; no conclusion exceeds the evidence.
