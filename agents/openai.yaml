@@ -1,4 +1,4 @@
 interface:
   display_name: "论文深度笔记"
-  short_description: "生成含前置学习、证据定位、概念释义与关联文献的论文笔记"
-  default_prompt: "使用 $paper-notes 阅读这个论文 PDF 或 URL，生成含前置知识、前置论文必读部分与摘要、分层阅读路径、证据定位、概念释义和关联论文核验的中文 Markdown 笔记。"
+  short_description: "生成单文档论文笔记、前置学习路径与SVG/PNG架构图"
+  default_prompt: "使用 $paper-notes 阅读这个论文 PDF 或 URL，把前置学习、概念解释、证据与关联论文整合进一个中文 Markdown，并用 diagram-design 生成 SVG/PNG 整体研究架构图。"
